@@ -2,7 +2,6 @@
 
 module Ersatz.Solver.Minisat.API where
 
-import Control.Monad
 import Control.Monad.IO.Class
 
 import qualified Data.IntSet as S
@@ -11,7 +10,11 @@ import qualified Data.IntMap as M
 import Ersatz
 import Control.Lens 
 import qualified MiniSat as API
-import Control.Monad.State
+-- import Control.Monad.State
+import Control.Applicative ((<$>))
+
+import Control.Monad (forM)
+import Data.Foldable (forM_)
 
 import System.IO
 import Control.Exception (bracket, finally, mask_, onException )
