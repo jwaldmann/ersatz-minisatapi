@@ -1,0 +1,10 @@
+*.pdf
+dist/
+*.hi
+*.o
+*.p_o
+*.*_o
+*.*-boot
+*.*~
+.cabal-sandbox/
+cabal.sandbox.config
